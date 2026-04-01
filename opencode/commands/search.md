@@ -1,0 +1,1 @@
+/home/aki/dev/agents/opencode/commands/search.md
