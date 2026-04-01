@@ -9,7 +9,7 @@ And any unstaged modifications:
 !`git diff`
 
 If there are no staged or unstaged changes, look at the most recent commit:
-!`git show --stat HEAD`
+!`git show HEAD`
 
 Review these changes and provide feedback on:
 - Logic errors or bugs

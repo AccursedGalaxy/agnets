@@ -4,7 +4,7 @@ subtask: true
 ---
 
 Here is the recent git activity:
-!`git log --oneline --since="2 days ago" --author="$(git config user.name)" 2>/dev/null || git log --oneline -10`
+!`git log --oneline --since="2 days ago" --author="$(git config user.email)" 2>/dev/null || git log --oneline -10`
 
 Here are any uncommitted changes:
 !`git status --short`

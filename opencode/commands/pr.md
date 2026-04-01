@@ -4,10 +4,10 @@ subtask: true
 ---
 
 Here is the git log for this branch compared to the base branch:
-!`git log --oneline $(git merge-base HEAD $(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2>/dev/null || echo main))..HEAD 2>/dev/null || git log --oneline -10`
+!`git log --oneline $(git merge-base HEAD $(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2>/dev/null || echo main))..HEAD 2>/dev/null || (echo "WARNING: could not resolve upstream branch, falling back to last 10 commits" && git log --oneline -10)`
 
 Here is the full diff:
-!`git diff $(git merge-base HEAD $(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2>/dev/null || echo main))..HEAD 2>/dev/null || git diff HEAD~5..HEAD`
+!`git diff $(git merge-base HEAD $(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2>/dev/null || echo main))..HEAD 2>/dev/null || (echo "WARNING: could not resolve upstream branch, falling back to HEAD~5..HEAD" && git diff HEAD~5..HEAD)`
 
 Write a pull request description with:
 - A concise title (one line, imperative mood)

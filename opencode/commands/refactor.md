@@ -2,9 +2,9 @@
 description: Refactor a file — usage: /refactor <file> [instructions]
 ---
 
-Refactor the file: $1
+Arguments: $ARGUMENTS
 
-Additional instructions: $2
+Parse the arguments as follows: the first token is the file path to refactor; everything after it is additional instructions. If only one token is provided, there are no additional instructions.
 
 Rules:
 - Read the file in full before making any changes.
@@ -12,6 +12,6 @@ Rules:
 - Match the conventions already present in the codebase.
 - Remove dead code. Do not comment it out.
 - Do not add comments that just restate what the code does.
-- If $2 is empty, use your judgment on what most needs improving.
+- If no additional instructions are provided, use your judgment on what most needs improving.
 
 After refactoring, briefly state what you changed and why.
